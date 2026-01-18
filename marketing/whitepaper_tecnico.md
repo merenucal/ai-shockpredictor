@@ -49,7 +49,18 @@ AI ShockPredictor no es un oráculo. Es una herramienta de gestión de riesgos. 
 
 Esto reduce las expectativas irreales, aumenta la confianza y protege legalmente el proyecto.
 
-## 5. Referencias
+## 5. Roadmap: Visión a Largo Plazo
+
+El desarrollo de AI ShockPredictor se guía por un principio de mejora continua y expansión de la transparencia. Nuestro plan de desarrollo a 12-24 meses incluye:
+
+*   **Expansión de Datos:** Integración de métricas de Glassnode y análisis de sentimiento de redes sociales.
+*   **Nuevos Activos:** Aplicación del modelo a Ethereum y otros altcoins principales.
+*   **Automatización:** Desarrollo de una API para la integración con plataformas de trading para la gestión automatizada de riesgos.
+*   **Hoja de Ruta de Transparencia:** Cada nueva versión del modelo incluirá una actualización del Whitepaper y una nueva ronda de backtesting.
+
+Para más detalles sobre la visión a largo plazo, consulte el documento `roadmap_section.md`.
+
+## 6. Referencias
 
 [1] Hochreiter, S., & Schmidhuber, J. (1997). *Long Short-Term Memory*. Neural computation, 9(8), 1735-1780.
 [2] Lundberg, S. M., & Lee, S. I. (2017). *A Unified Approach to Interpreting Model Predictions*. Advances in neural information processing systems, 30.
