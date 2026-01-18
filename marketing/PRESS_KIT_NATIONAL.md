@@ -15,7 +15,7 @@
 
 A diferencia de los métodos tradicionales, esta IA utiliza una red neuronal LSTM y datos on-chain de CryptoQuant para detectar el **riesgo elevado de eventos extremos** (shocks de volatilidad). Para garantizar la máxima credibilidad, hemos publicado un **Whitepaper Técnico** que detalla la metodología y la explicabilidad SHAP, además de una validación histórica con backtesting en caídas clave del mercado (Marzo 2020, Mayo 2021, Crisis FTX). El objetivo es ofrecer una herramienta de gestión de riesgos con **transparencia radical**.
 
-*"Nuestro objetivo no es adivinar el futuro, sino ofrecer una herramienta de gestión de riesgos con honestidad radical. No prometemos ganancias, alertamos sobre el riesgo. El inversor merece saber cómo funciona la tecnología que protege su capital"*, afirma Antonio, creador del proyecto. (Biografía completa adjunta en `founder_bio.md`).
+*"Nuestro objetivo no es adivinar el futuro, sino ofrecer una herramienta de gestión de riesgos con honestidad radical. No prometemos ganancias, alertamos sobre el riesgo. El inversor merece saber cómo funciona la tecnología que protege su capital"*, afirma Antonio (seudónimo), creador del proyecto. El fundador ha elegido el anonimato para que el foco se mantenga en la tecnología y la transparencia del código, no en la trayectoria personal. (Biografía completa adjunta en `founder_bio.md`).
 
 ---
 
