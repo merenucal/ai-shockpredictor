@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ShockPredictor - Predice el Caos del Mercado Cripto</title>
+    <meta name="description" content="Inteligencia Artificial que predice volatilidad extrema en Bitcoin y criptomonedas. Protege tu inversión con alertas en tiempo real.">
+    <meta name="keywords" content="AI, criptomonedas, Bitcoin, predicción, volatilidad, IA, trading">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffff;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #00ffff;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #00ffff 0%, #00cc99 100%);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+            padding: 80px 0;
+            min-height: 600px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #00ffff 0%, #00ff99 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #00ffff 0%, #00cc99 100%);
+            color: #000;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #00ffff;
+            padding: 15px 40px;
+            border: 2px solid #00ffff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2);
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            background: rgba(0, 255, 200, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid #00ffff;
+            transition: all 0.3s;
+        }
+        
+        .feature:hover {
+            background: rgba(0, 255, 200, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .feature h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: rgba(0, 0, 0, 0.3);
+            margin: 80px 0;
+            border-top: 1px solid rgba(0, 255, 200, 0.1);
+            border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #00ffff 0%, #00ff99 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(0, 255, 200, 0.1) 0%, rgba(0, 200, 150, 0.05) 100%);
+            border: 1px solid rgba(0, 255, 200, 0.2);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 255, 200, 0.5);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.15);
+        }
+        
+        .pricing-card.featured {
+            background: linear-gradient(135deg, rgba(0, 255, 200, 0.2) 0%, rgba(0, 200, 150, 0.1) 100%);
+            border: 2px solid #00ffff;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            color: #00ffff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 36px;
+            color: #00ff99;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .price-period {
+            color: #808080;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .features-list {
+            text-align: left;
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+        
+        .features-list li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+        }
+        
+        .features-list li:before {
+            content: "✓ ";
+            color: #00ffff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 40px 0;
+            border-top: 1px solid rgba(0, 255, 200, 0.1);
+            text-align: center;
+            color: #808080;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .footer-section h4 {
+            color: #00ffff;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section a {
+            color: #b0b0b0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #00ffff;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 255, 200, 0.1);
+            padding-top: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            nav {
+                gap: 15px;
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="marketing/logo_icon.png" alt="AI ShockPredictor">
+                    AI ShockPredictor
+                </a>
+                <nav>
+                    <a href="#features">Características</a>
+                    <a href="#pricing">Precios</a>
+                    <a href="#about">Sobre Nosotros</a>
+                    <a href="https://github.com/merenucal/ai-shockpredictor" target="_blank">GitHub</a>
+                    <a href="https://merenu.gumroad.com/l/gvdxqd" class="cta-button">Comprar PRO</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container" style="grid-column: 1 / -1;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div class="hero-content">
+                    <h1>Predice el Caos del Mercado Cripto</h1>
+                    <p>AI ShockPredictor utiliza redes neuronales avanzadas para anticipar movimientos bruscos en Bitcoin y otras criptomonedas. Protege tu inversión con alertas en tiempo real basadas en datos on-chain.</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="window.location.href='https://merenu.gumroad.com/l/gvdxqd'">Comenzar Ahora</button>
+                        <button class="btn-secondary" onclick="document.getElementById('features').scrollIntoView()">Más Información</button>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <h3>🎯 Precisión >65%</h3>
+                            <p>Modelo LSTM entrenado con millones de datos históricos</p>
+                        </div>
+                        <div class="feature">
+                            <h3>⚡ Tiempo Real</h3>
+                            <p>Alertas instantáneas cuando se detecta volatilidad extrema</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🔓 Código Abierto</h3>
+                            <p>Transparencia total en GitHub para auditoría completa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="marketing/logo_hero.jpg" alt="AI ShockPredictor Hero">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Planes de Precios</h2>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">€0</div>
+                    <div class="price-period">para siempre</div>
+                    <ul class="features-list">
+                        <li>Acceso a código abierto</li>
+                        <li>Análisis básico</li>
+                        <li>Comunidad en GitHub</li>
+                        <li>Actualizaciones mensuales</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="window.location.href='https://github.com/merenucal/ai-shockpredictor'">Acceder a GitHub</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>PRO</h3>
+                    <div class="price">€29</div>
+                    <div class="price-period">por mes</div>
+                    <ul class="features-list">
+                        <li>Alertas en tiempo real</li>
+                        <li>Análisis avanzado</li>
+                        <li>API comercial</li>
+                        <li>Soporte prioritario</li>
+                        <li>Bot de Telegram</li>
+                    </ul>
+                    <button class="btn-primary" onclick="window.location.href='https://merenu.gumroad.com/l/gvdxqd?wanted=true&code=EARLYBIRD50'">Obtener PRO (50% OFF)</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>PRO+</h3>
+                    <div class="price">€99</div>
+                    <div class="price-period">por mes</div>
+                    <ul class="features-list">
+                        <li>Todo de PRO</li>
+                        <li>Análisis de múltiples activos</li>
+                        <li>Integración personalizada</li>
+                        <li>Consultoría dedicada</li>
+                        <li>Acceso a beta features</li>
+                    </ul>
+                    <button class="btn-secondary" onclick="window.location.href='https://merenu.gumroad.com/l/gvdxqd'">Contactar Ventas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" style="padding: 80px 0;">
+        <div class="container">
+            <h2 style="font-size: 40px; margin-bottom: 50px; text-align: center; background: linear-gradient(135deg, #00ffff 0%, #00ff99 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">¿Cómo Funciona?</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div>
+                    <h3 style="color: #00ffff; font-size: 24px; margin-bottom: 20px;">Análisis On-Chain en Tiempo Real</h3>
+                    <p style="color: #b0b0b0; margin-bottom: 20px;">Nuestro modelo LSTM analiza millones de transacciones blockchain para detectar patrones de comportamiento anómalo que preceden a caídas de precio.</p>
+                    
+                    <h3 style="color: #00ffff; font-size: 24px; margin-bottom: 20px; margin-top: 30px;">Shock Score Inteligente</h3>
+                    <p style="color: #b0b0b0; margin-bottom: 20px;">Cada activo recibe una puntuación que indica el riesgo de volatilidad extrema. Cuando sube, es hora de actuar.</p>
+                    
+                    <h3 style="color: #00ffff; font-size: 24px; margin-bottom: 20px; margin-top: 30px;">Alertas Personalizadas</h3>
+                    <p style="color: #b0b0b0;">Recibe notificaciones por Telegram, email o API cuando se detecte riesgo inminente.</p>
+                </div>
+                
+                <div style="background: rgba(0, 255, 200, 0.05); padding: 40px; border-radius: 10px; border: 1px solid rgba(0, 255, 200, 0.2);">
+                    <h3 style="color: #00ffff; text-align: center; margin-bottom: 30px;">Criptomonedas Soportadas</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div style="text-align: center; padding: 20px; background: rgba(0, 255, 200, 0.1); border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 10px;">₿</div>
+                            <div style="color: #00ffff; font-weight: bold;">Bitcoin</div>
+                            <div style="color: #808080; font-size: 12px;">BTC</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: rgba(0, 255, 200, 0.1); border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 10px;">Ξ</div>
+                            <div style="color: #00ffff; font-weight: bold;">Ethereum</div>
+                            <div style="color: #808080; font-size: 12px;">ETH</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: rgba(0, 255, 200, 0.1); border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 10px;">◎</div>
+                            <div style="color: #00ffff; font-weight: bold;">Solana</div>
+                            <div style="color: #808080; font-size: 12px;">SOL</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: rgba(0, 255, 200, 0.1); border-radius: 8px;">
+                            <div style="font-size: 24px; margin-bottom: 10px;">₳</div>
+                            <div style="color: #00ffff; font-weight: bold;">Cardano</div>
+                            <div style="color: #808080; font-size: 12px;">ADA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 80px 0; background: rgba(0, 0, 0, 0.3); margin: 80px 0; border-top: 1px solid rgba(0, 255, 200, 0.1); border-bottom: 1px solid rgba(0, 255, 200, 0.1);">
+        <div class="container">
+            <h2 style="font-size: 40px; margin-bottom: 50px; text-align: center; background: linear-gradient(135deg, #00ffff 0%, #00ff99 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Sobre el Proyecto</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                <div>
+                    <h3 style="color: #00ffff; font-size: 24px; margin-bottom: 20px;">Desarrollado en España</h3>
+                    <p style="color: #b0b0b0; margin-bottom: 20px;">AI ShockPredictor es una iniciativa española de innovación tecnológica que busca democratizar el acceso a herramientas de análisis de grado institucional.</p>
+                    
+                    <h3 style="color: #00ffff; font-size: 24px; margin-bottom: 20px; margin-top: 30px;">Transparencia Total</h3>
+                    <p style="color: #b0b0b0; margin-bottom: 20px;">Nuestro código está disponible en GitHub para que cualquiera pueda auditar, verificar y contribuir a mejorar el modelo.</p>
+                    
+                    <h3 style="color: #00ffff; font-size: 24px; margin-bottom: 20px; margin-top: 30px;">Misión</h3>
+                    <p style="color: #b0b0b0;">Proteger al pequeño inversor de la volatilidad extrema del mercado cripto mediante inteligencia artificial de última generación.</p>
+                </div>
+                
+                <div style="background: rgba(0, 255, 200, 0.05); padding: 40px; border-radius: 10px; border: 1px solid rgba(0, 255, 200, 0.2);">
+                    <h3 style="color: #00ffff; text-align: center; margin-bottom: 30px;">Tecnología</h3>
+                    <ul style="list-style: none; color: #b0b0b0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(0, 255, 200, 0.1);"><span style="color: #00ffff;">→</span> TensorFlow & Keras (LSTM)</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(0, 255, 200, 0.1);"><span style="color: #00ffff;">→</span> CryptoQuant API (Datos On-Chain)</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(0, 255, 200, 0.1);"><span style="color: #00ffff;">→</span> SHAP (Explainability)</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(0, 255, 200, 0.1);"><span style="color: #00ffff;">→</span> FastAPI (Backend)</li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(0, 255, 200, 0.1);"><span style="color: #00ffff;">→</span> Streamlit (Dashboard)</li>
+                        <li style="padding: 10px 0;"><span style="color: #00ffff;">→</span> Telegram Bot API</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Producto</h4>
+                    <a href="https://github.com/merenucal/ai-shockpredictor">GitHub</a>
+                    <a href="https://merenu.gumroad.com/l/gvdxqd">Comprar PRO</a>
+                    <a href="#pricing">Precios</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <a href="#about">Sobre Nosotros</a>
+                    <a href="mailto:merenucal@gmail.com">Contacto</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">GDPR</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <a href="https://x.com">X (Twitter)</a>
+                    <a href="https://bsky.app/profile/aishockpredictor.bsky.social">Bluesky</a>
+                    <a href="https://t.me">Telegram</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI ShockPredictor. Todos los derechos reservados. Desarrollado en España 🇪🇸</p>
+                <p style="margin-top: 10px; font-size: 12px; color: #606060;">Aviso: Este proyecto es de naturaleza educativa. No constituye asesoramiento financiero. Invierte bajo tu propio riesgo.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
