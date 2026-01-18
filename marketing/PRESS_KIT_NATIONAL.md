@@ -7,15 +7,15 @@
 
 ## 📰 NOTA DE PRENSA (Versión Medios Generalistas)
 
-### TITULAR: Un emprendedor español lanza una inteligencia artificial capaz de predecir el "caos" en el mercado de las criptomonedas.
+### TITULAR: La IA española que detecta el riesgo de 'shocks' en Bitcoin: Transparencia total con Whitepaper y validación histórica.
 
 *(Sugerencia de imagen para el artículo: `logo_hero.jpg`)*
 
 **MADRID, 18 de enero de 2026** – En un contexto donde la volatilidad de los mercados digitales genera incertidumbre global, nace **AI ShockPredictor**, una herramienta pionera desarrollada en España que utiliza algoritmos de aprendizaje profundo (Deep Learning) para anticipar movimientos bruscos en el precio de Bitcoin y otras criptomonedas.
 
-A diferencia de los métodos tradicionales, esta IA analiza en tiempo real millones de datos "on-chain" (movimientos reales de capital) y el sentimiento de las redes sociales para asignar un **"Shock Score"**. Cuando este indicador sube, el sistema alerta a los usuarios antes de que se produzca la caída, permitiendo proteger el ahorro de miles de pequeños inversores.
+A diferencia de los métodos tradicionales, esta IA utiliza una red neuronal LSTM y datos on-chain de CryptoQuant para detectar el **riesgo elevado de eventos extremos** (shocks de volatilidad). Para garantizar la máxima credibilidad, hemos publicado un **Whitepaper Técnico** que detalla la metodología y la explicabilidad SHAP, además de una validación histórica con backtesting en caídas clave del mercado (Marzo 2020, Mayo 2021, Crisis FTX). El objetivo es ofrecer una herramienta de gestión de riesgos con **transparencia radical**.
 
-*"El objetivo no es adivinar el futuro, sino entender el presente mejor que nadie. En la era de los algoritmos, el inversor humano necesita herramientas de grado institucional para competir en igualdad de condiciones"*, afirma Antonio, creador del proyecto. (Biografía completa adjunta en `founder_bio.md`).
+*"Nuestro objetivo no es adivinar el futuro, sino ofrecer una herramienta de gestión de riesgos con honestidad radical. No prometemos ganancias, alertamos sobre el riesgo. El inversor merece saber cómo funciona la tecnología que protege su capital"*, afirma Antonio, creador del proyecto. (Biografía completa adjunta en `founder_bio.md`).
 
 ---
 
@@ -49,9 +49,9 @@ A diferencia de los métodos tradicionales, esta IA analiza en tiempo real millo
 **Cuerpo:**
 Hola [Nombre del Periodista],
 
-Te escribo porque acabo de lanzar **AI ShockPredictor**, una tecnología desarrollada íntegramente en España que está llamando la atención en el sector financiero. 
+Te escribo porque acabo de lanzar **AI ShockPredictor**, una tecnología desarrollada íntegramente en España que está redefiniendo la credibilidad en el sector financiero.
 
-Utilizamos modelos de redes neuronales (LSTM) para predecir caídas en el mercado cripto con una precisión que hasta ahora solo estaba al alcance de grandes fondos de inversión. Creemos que es una historia de innovación local con un impacto global muy relevante para vuestra sección de [Tecnología/Economía].
+Utilizamos modelos de redes neuronales (LSTM) y datos on-chain para detectar el riesgo de caídas en el mercado cripto. Para combatir la desconfianza, hemos publicado un **Whitepaper Técnico** y datos de **validación histórica** que demuestran la solidez del modelo. Creemos que es una historia de innovación local con un impacto global muy relevante para vuestra sección de [Tecnología/Economía] por su enfoque en la **transparencia radical**.
 
 Estoy a tu disposición para una entrevista, demostración en vivo o para enviarte más material gráfico.
 
