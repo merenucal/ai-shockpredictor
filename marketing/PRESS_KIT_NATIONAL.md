@@ -41,6 +41,9 @@ A diferencia de los métodos tradicionales, esta IA utiliza una red neuronal LST
 
 **Motivo:** Proteger la propiedad intelectual y evitar la filtración de información privilegiada que podría ser utilizada por competidores. Toda la información técnica y las actualizaciones se proporcionarán exclusivamente a través del Whitepaper y los comunicados oficiales.
 
+**Canal de Contacto Oficial:**
+Todas las consultas de prensa, inversores o usuarios deben dirigirse a **merenucal@gmail.com**. La persona detrás de este correo es el único contacto autorizado y portavoz de "Antonio", contando con su plena confianza para gestionar todas las comunicaciones.
+
 ## 🎤 GUÍA PARA ENTREVISTAS (Puntos Clave)
 1. **¿Qué es?** Una brújula digital para el mercado cripto.
 2. **¿Cómo funciona?** Como un meteorólogo: analiza nubes de datos para predecir tormentas financieras.

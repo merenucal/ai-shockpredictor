@@ -20,6 +20,9 @@ Para proteger la propiedad intelectual y evitar la filtración de información p
 
 Toda la información técnica y las actualizaciones se proporcionarán exclusivamente a través del Whitepaper, el repositorio de GitHub y los comunicados oficiales.
 
+**Canal de Comunicación Oficial:**
+La persona detrás del correo **merenucal@gmail.com** actúa como el único contacto oficial y portavoz de "Antonio". Esta persona cuenta con la plena y total confianza de "Antonio" para canalizar todas las preguntas, inquietudes y solicitudes de los medios, inversores o usuarios. Cualquier consulta debe dirigirse a este correo.
+
 ### Enfoque en el Proyecto
 
 El trabajo de Antonio se centra en:
