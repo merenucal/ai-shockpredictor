@@ -35,6 +35,12 @@ A diferencia de los métodos tradicionales, esta IA utiliza una red neuronal LST
 
 ---
 
+## 🎤 POLÍTICA DE COMUNICACIÓN Y ENTREVISTAS (BLINDAJE)
+
+**IMPORTANTE:** El fundador, "Antonio" (seudónimo), no concederá entrevistas ni participará en eventos públicos durante el primer año de lanzamiento del proyecto.
+
+**Motivo:** Proteger la propiedad intelectual y evitar la filtración de información privilegiada que podría ser utilizada por competidores. Toda la información técnica y las actualizaciones se proporcionarán exclusivamente a través del Whitepaper y los comunicados oficiales.
+
 ## 🎤 GUÍA PARA ENTREVISTAS (Puntos Clave)
 1. **¿Qué es?** Una brújula digital para el mercado cripto.
 2. **¿Cómo funciona?** Como un meteorólogo: analiza nubes de datos para predecir tormentas financieras.

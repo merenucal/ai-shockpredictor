@@ -14,6 +14,12 @@ Antonio es el arquitecto principal detrás de AI ShockPredictor, un proyecto que
 
 Su misión es democratizar el acceso a herramientas de gestión de riesgos de grado institucional, permitiendo que el pequeño inversor se proteja de la volatilidad extrema con la misma tecnología que usan los grandes fondos, pero con una transparencia radical como bandera.
 
+### Política de Comunicación (Blindaje Técnico)
+
+Para proteger la propiedad intelectual y evitar la filtración de información privilegiada que podría ser utilizada por competidores, el fundador, "Antonio" (seudónimo), **no concederá entrevistas ni participará en eventos públicos durante el primer año de lanzamiento del proyecto.**
+
+Toda la información técnica y las actualizaciones se proporcionarán exclusivamente a través del Whitepaper, el repositorio de GitHub y los comunicados oficiales.
+
 ### Enfoque en el Proyecto
 
 El trabajo de Antonio se centra en:
