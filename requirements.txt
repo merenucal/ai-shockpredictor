@@ -1,0 +1,12 @@
+tensorflow>=2.15.0
+pandas
+numpy
+matplotlib
+seaborn
+shap
+streamlit
+python-telegram-bot
+requests
+python-dotenv
+scikit-learn
+plotly
